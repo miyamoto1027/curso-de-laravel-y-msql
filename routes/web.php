@@ -10,10 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+//Route::get('permiso/{nombre}/{slug?}','PermisoController@index');
+Route::get('permiso','PermisoController@index')->name('permisos');
+
+Route::get('admin/sistema/permiso','PermisoController@create')->name('administrador');
 
 Auth::routes();
 
