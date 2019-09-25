@@ -14,8 +14,8 @@ class PermisoController extends Controller
     //public function index($nombre, $slug = null)
     public function index()
     {
-        //return view('permiso',compact('nombre','slug'));
         return view('permiso');
+        
         
     }
 
@@ -27,7 +27,7 @@ class PermisoController extends Controller
     public function create()
     {
 
-       return view('administrador');
+    
     }
 
     /**

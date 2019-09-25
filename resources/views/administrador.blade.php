@@ -1,1 +1,0 @@
-<a href="{{route('permisos')}}">irr a la </a>
