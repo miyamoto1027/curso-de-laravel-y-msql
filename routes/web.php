@@ -14,6 +14,15 @@
 Route::get('/', 'PermisoController@index');
 
 
+Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
+
+    Route::get('inicio', 'InicioController@index')->name('inicio');
+    Route::get('inicio/crear', 'InicioController@create')->name('crear');
+
+
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
