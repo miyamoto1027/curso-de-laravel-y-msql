@@ -19,8 +19,19 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
     Route::get('inicio', 'InicioController@index')->name('inicio');
     Route::get('inicio/crear', 'InicioController@create')->name('crear');
 
+    Route::get('menu', 'MenuController@index')->name('menu');
+    Route::get('menu/crear','MenuController@crear')->name('crear');
+    Route::post('menu','MenuController@guardar')->name('guardar');
+
 
 });
+//acceso  a  menu desde  los controllers
+/*Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
+
+    Route::get('menu/crear','MenuController@crear')->name('crear');
+
+
+});*/
 
 
 Auth::routes();
